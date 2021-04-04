@@ -189,24 +189,22 @@ export class HomeComponent implements AfterViewInit, OnInit {
   }
 
   GetEmployeeList() {
-    /** Given api is giving 429 too many request error many time 
-    * so I have used that api json to bind this data  */
-    this.dataSource.data = this.employeeList;
-    this.totalCount = this.employeeList.length;
-    this.pageSize = 5;
-
     /** Below is the code when api return data  */
-    // this.accountService.getEmployeeList().subscribe(
-    //   data => {
-    //     this.dataSource.data = data['data'];
-    //     this.dataSource.data = this.employeeList;
-    //     this.totalCount = this.employeeList.length;
-    //     this.pageSize = 5;
-    //   },
-    //   error => {
-    //     alert(error.message);
-    //     console.log("error", error)
-    //   });
+    this.accountService.getEmployeeList().subscribe(
+      data => {
+        this.dataSource.data = data['data'];
+        this.dataSource.data = this.employeeList;
+        this.totalCount = this.employeeList.length;
+        this.pageSize = 5;
+      },
+      error => {
+        /** Given api is giving 429 too many request error many time 
+   * so I have used that api json to bind this data  */
+        this.dataSource.data = this.employeeList;
+        this.totalCount = this.employeeList.length;
+        this.pageSize = 5;
+        console.log("error", error)
+      });
   }
 
   ngAfterViewInit() {
