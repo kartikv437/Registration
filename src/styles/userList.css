@@ -1,0 +1,24 @@
+.user_table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .user_table th, .user_table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .user_table th {
+    background-color: #f0f0f0;
+  }
+  
+  .user_table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .head_area{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }

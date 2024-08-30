@@ -1,0 +1,20 @@
+.user_detail_form {
+    background-color: lightblue;
+    padding: 20px;
+  }
+
+  .form_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .head_area{
+    padding: 10px;
+  }
+
+  .logout_area{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
