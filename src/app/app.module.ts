@@ -8,14 +8,13 @@ import { FormComponent } from './shared/form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ResultComponent } from './result/result.component';
 import { FocusDirective } from './shared/focus.directive';
-
 @NgModule({
   declarations: [
     AppComponent,
     MultistepformComponent,
     FormComponent,
     ResultComponent,
-    FocusDirective
+    FocusDirective,
   ],
   providers: [],
   imports: [

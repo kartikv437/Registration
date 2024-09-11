@@ -19,7 +19,7 @@ export class ResultComponent implements OnInit {
     const groupArr = this.allFormsData.reduce((accumulator, currentValue) => {
       const key = currentValue['formName'];
       if (!accumulator[key]) {
-          accumulator[key] = [];
+        accumulator[key] = [];
       }
       accumulator[key].push(currentValue);
       return accumulator;
@@ -37,26 +37,26 @@ export class ResultComponent implements OnInit {
     let data = '';
     this.groupObjKeys = Object.keys(groupArr);
     console.log(this.groupObjKeys);
-        for (let i = 0; i < this.groupObjKeys.length; i++) {
-          const objKeys = Object.keys(groupArr[this.groupObjKeys[i]][0]);
-          console.log(objKeys);
-            data += '<tr><th colspan=' + objKeys.length + '>' + this.groupObjKeys[i] + '</th></tr>';
-                data += '<tr>';
-                for (let k = 0; k < objKeys.length; k++) {
-                        data += '<th>' + objKeys[k] + '</th>';
-                }
-                data += '</tr>';
-                for (let j = 0; j < groupArr[this.groupObjKeys[i]].length; j++) {
-                    data += '<tr>';
-                    for (let k = 0; k < objKeys.length; k++) {
-                        data += '<td>' + groupArr[this.groupObjKeys[i]][j][objKeys[k]] + '</td>';
-                    }
-                    data += '</tr>';
-                }
+    for (let i = 0; i < this.groupObjKeys.length; i++) {
+      const objKeys = Object.keys(groupArr[this.groupObjKeys[i]][0]);
+      console.log(objKeys);
+      data += '<tr><th colspan=' + objKeys.length + '>' + this.groupObjKeys[i] + '</th></tr>';
+      data += '<tr>';
+      for (let k = 0; k < objKeys.length; k++) {
+        data += '<th>' + objKeys[k] + '</th>';
+      }
+      data += '</tr>';
+      for (let j = 0; j < groupArr[this.groupObjKeys[i]].length; j++) {
+        data += '<tr>';
+        for (let k = 0; k < objKeys.length; k++) {
+          data += '<td>' + groupArr[this.groupObjKeys[i]][j][objKeys[k]] + '</td>';
         }
-        this.renderer.setProperty(table, 'innerHTML', data);
-        this.renderer.appendChild(div, table);
-        this.renderer.appendChild(this.elementRef.nativeElement, div);
+        data += '</tr>';
+      }
+    }
+    this.renderer.setProperty(table, 'innerHTML', data);
+    this.renderer.appendChild(div, table);
+    this.renderer.appendChild(this.elementRef.nativeElement, div);
   }
 
 }

@@ -3,9 +3,29 @@ body {
   background: #CCCCCC;
 }
 
+.whole_body{
+  display: flex;
+  justify-content: end;
+}
+
+.form_title{
+  font-weight: 600;
+    color: darkmagenta;
+    font-size: xxx-large;
+}
+
+.container {
+  background-image: url('../assets/images/girl.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; /* Set the height to 100% of the viewport */
+  width: 100vw;
+}
+
 h4 {
   margin: 20px 0;
 }
+
 ul li {
   padding: 5px 0;
 }
@@ -16,15 +36,14 @@ ul li {
   position: relative;
   display: inline-block;
 }
+
 .multistepbox span {
   margin-right: 5px;
 }
+
 .multistepbox button {
   padding: 0;
-  background-color: transparent;
+  /* background-color: transparent; */
   box-shadow: none;
   border: 0;
 }
-
-
-

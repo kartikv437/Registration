@@ -18,17 +18,17 @@ export class AppComponent implements OnInit {
           'input': 'text',
           'valids': [{
               'valid': 'required',
-              'error': 'firstName is required'
+              'error': 'First Name is required'
             },
             {
               'valid': 'pattern',
               'validator': '^[a-zA-Z]+$',
-              'error': 'firstName is accept only text'
+              'error': 'First Name is accept only text'
             },
             {
               'valid': 'minlength',
               'length': 3,
-              'error': 'firstName must be at least 3 characters'
+              'error': 'First Name must be at least 3 characters'
             }
           ]
           },
@@ -42,17 +42,17 @@ export class AppComponent implements OnInit {
             'input': 'text',
             'valids': [{
                 'valid': 'required',
-                'error': 'lastName is required'
+                'error': 'Last Name is required'
               },
               {
                 'valid': 'pattern',
                 'validator': '^[a-zA-Z]+$',
-                'error': 'lastName is accept only text'
+                'error': 'Last Name is accept only text'
               },
               {
                 'valid': 'minlength',
                 'length': 3,
-                'error': 'lastName must be at least 3 characters'
+                'error': 'Last Name must be at least 3 characters'
               }
             ]
           },
@@ -60,11 +60,11 @@ export class AppComponent implements OnInit {
             'key': 'marital status',
             'input': 'select',
             'items': [{
-                'name': 'married',
+                'name': 'Married',
                 'id': 0
               },
               {
-                'name': 'unmarried',
+                'name': 'Unmarried',
                 'id': 1
               }
             ],
@@ -130,6 +130,40 @@ export class AppComponent implements OnInit {
               },
             ]
           },
+          // {
+          //   'key': 'country',
+          //   'input': 'select',
+          //   'items': [{
+          //       'name': 'India',
+          //       'id': 0
+          //     },
+          //     {
+          //       'name': 'Austrailia',
+          //       'id': 1
+          //     },
+          //     {
+          //       'name': 'China',
+          //       'id': 2
+          //     },
+          //     {
+          //       'name': 'Japan',
+          //       'id': 3
+          //     },
+          //     {
+          //       'name': 'Bangladesh',
+          //       'id': 4
+          //     },
+          //     {
+          //       'name': 'Srilanka',
+          //       'id': 5
+          //     }
+          //   ],
+          //   'valids': [{
+          //       'valid': 'required',
+          //       'error': 'country is required'
+          //     },
+          //   ]
+          // },
           {
             'key': 'state',
             'input': 'text',
