@@ -1,0 +1,30 @@
+html,
+body {
+  background: #CCCCCC;
+}
+
+h4 {
+  margin: 20px 0;
+}
+ul li {
+  padding: 5px 0;
+}
+
+/* multistep container */
+
+.multistepbox {
+  position: relative;
+  display: inline-block;
+}
+.multistepbox span {
+  margin-right: 5px;
+}
+.multistepbox button {
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  border: 0;
+}
+
+
+
