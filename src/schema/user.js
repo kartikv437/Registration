@@ -7,6 +7,7 @@ const userSchema = new Schema({
     first_name: String,
     middle_name: String,
     last_name: String,
+    access_token: String,
     age: Number,
     gender: String,
     dob: Date
@@ -15,4 +16,4 @@ const userSchema = new Schema({
     versionKey: false
 })
 
-module.exports = mongoose.model('users', userSchema, "users");
+module.exports = mongoose.model('users', userSchema, "_users");

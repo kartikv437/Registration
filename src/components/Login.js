@@ -19,13 +19,16 @@ function Login(){
         }
 
         axios.post('http://localhost:3001/login',{userName,password}).then((res)=>{
-            console.log(res);
             if(res && res['data'] && res['data']['status']
                 && res.data['status'] === 'Success'
             ){
                 localStorage.setItem('userId',res['data']['result'])
                 navigate('/home');
+            }else{
+                return setError(res['data']['message'])
             }
+        }).catch((err)=>{
+            return setError('Something went wrong.');
         })
     }
 
